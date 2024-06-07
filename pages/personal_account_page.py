@@ -42,7 +42,7 @@ class PersonalAccount(BasePage):
 
     @allure.step('Ожидание смены страницы логина')
     def wait_for_url_changes_login(self):
-        self.wait_url_changes(URL.LOGIN_PAGE)
+        self.wait_url_changes(URL.BASE_PAGE + URL.LOGIN_PAGE)
 
     @allure.step('Ожидание смены главной страницы')
     def wait_for_url_changes_main(self):
@@ -50,11 +50,11 @@ class PersonalAccount(BasePage):
 
     @allure.step('Ожидание смены страницы аккаунт')
     def wait_for_url_changes_account(self):
-        self.wait_url_changes(URL.ACCOUNT_PROFILE_PAGE)
+        self.wait_url_changes(URL.BASE_PAGE + URL.ACCOUNT_PROFILE_PAGE)
 
     @allure.step('Ожидание смены страницы аккаунт-профайл')
     def wait_for_url_changes_profile_account(self):
-        self.wait_url_changes(URL.ACCOUNT_PROFILE_PAGE_FINAL)
+        self.wait_url_changes(URL.BASE_PAGE + URL.ACCOUNT_PROFILE_PAGE_FINAL)
 
     @allure.step('Вход в личный кабинет с ожиданием смены необходимых страниц')
     def click_enter_personal_account_wait_pages_changes(self):

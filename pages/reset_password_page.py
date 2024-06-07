@@ -43,7 +43,7 @@ class ResetPasswordPage(BasePage):
 
     @allure.step('Ожидание смены веб-странички с восстановлением пароля')
     def wait_for_url_changes_restore(self):
-        self.wait_url_changes(URL.FORGOT_PASSWORD_PAGE)
+        self.wait_url_changes(URL.BASE_PAGE + URL.FORGOT_PASSWORD_PAGE)
 
     @allure.step('Получение и возврат атрибута вида "тип" со значением "текст"')
     def get_input_status(self):
